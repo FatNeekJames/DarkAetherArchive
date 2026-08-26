@@ -8,4 +8,5 @@ export const zombieMaps=[
   ['exit-115-survival','Exit 115','Black Ops 7 — Survival'],
   ['nuked-survival','Nuked','Black Ops 7 — Survival'],
   ['mars-survival','Mars','Black Ops 7 — Survival']
+  ,['rex-infernus','Rex Infernus','Black Ops 7']
 ] as const;
