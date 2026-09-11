@@ -1,6 +1,7 @@
 import { bo7Intel } from './bo7-intel';
+import { coldWarIntel } from './cold-war-intel';
 
-export type IntelRecord = { title: string; type: string; location: string };
+export type IntelRecord = { title: string; type: string; location: string; faction?: string };
 export type ResearchSource = { label: string; title: string; url: string };
 
 export const mapIntel: Record<string, IntelRecord[]> = {
@@ -1123,11 +1124,11 @@ export const mapIntel: Record<string, IntelRecord[]> = {
   ]
 } as const;
 
-Object.assign(mapIntel, bo7Intel);
+Object.assign(mapIntel, bo7Intel, coldWarIntel);
 
 export const coldWarIntelTotals: Record<string, number> = {
   'die-maschine': 80,
-  'onslaught': 51,
+  'onslaught': 57,
   'firebase-z': 91,
   outbreak: 266,
   'mauer-der-toten': 48,

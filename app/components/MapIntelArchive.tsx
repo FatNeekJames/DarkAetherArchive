@@ -10,7 +10,7 @@ type Props = {
   sources: ResearchSource[];
 };
 
-const filters = ['All', 'Audio Log', 'Document', 'Artifact'] as const;
+const filters = ['All', 'Audio Log', 'Document', 'Transmission', 'Artifact'] as const;
 
 export default function MapIntelArchive({ mapSlug, mapName, records, sources }: Props) {
   const [query, setQuery] = useState('');
@@ -68,7 +68,7 @@ export default function MapIntelArchive({ mapSlug, mapName, records, sources }: 
       return <article key={id} className={isCollected ? 'collected' : ''}>
         <button className="intel-check" onClick={() => toggle(id)} aria-label={`${isCollected ? 'Mark uncollected' : 'Mark collected'}: ${record.title}`} aria-pressed={isCollected}>{isCollected ? '✓' : ''}</button>
         <span>{String(originalIndex + 1).padStart(2, '0')}</span>
-        <div className="intel-record-copy"><b>{record.title}</b><small>{record.type}</small><p>{record.location}</p></div>
+        <div className="intel-record-copy"><b>{record.title}</b><small>{record.type}{record.faction ? ` · ${record.faction}` : ''}</small><p>{record.location}</p></div>
         {primarySource ? <a href={primarySource.url} target="_blank" rel="noreferrer">SOURCE ↗</a> : <i>VERIFIED RECORD</i>}
       </article>;
     })}</div>

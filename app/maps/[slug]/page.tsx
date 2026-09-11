@@ -2,6 +2,7 @@ import { mapIntel, coldWarIntelTotals } from '../../data/map-intel';
 import { zombieMaps } from '../../data/maps';
 import { mapResearchSources } from '../../data/research-sources';
 import MapIntelArchive from '../../components/MapIntelArchive';
+import { mapLore } from '../../data/map-lore';
 import Link from 'next/link';
 
 export default async function MapDossier({ params }: { params: Promise<{ slug: string }> }) {
@@ -12,11 +13,24 @@ export default async function MapDossier({ params }: { params: Promise<{ slug: s
   const records = mapIntel[slug] ?? [];
   const sources = mapResearchSources[slug] ?? [];
   const coldWarTotal = coldWarIntelTotals[slug];
+  const lore = mapLore[slug];
 
   return <main className="route-page map-dossier">
     <header><Link href="/">DA / DARK AETHER ARCHIVE</Link><nav><Link className="selected" href="/maps">Maps</Link><Link href="/intel">Intel</Link><Link href="/timeline">Timeline</Link><Link href="/signals">Signals</Link></nav></header>
     <section className="map-dossier-hero"><Link href="/maps">← MAP INDEX</Link><span>{game.toUpperCase()}{' // '}OPERATIONAL DOSSIER</span><h1>{name}</h1><p>Map-specific intelligence, collection locations, and evidence recovered from this operation.</p></section>
     <section className="dossier-content">
+      <p className="section-kicker">OPERATIONAL BRIEFING</p>
+      <h2>Story and lore</h2>
+      {lore ? <>
+        <div className="lore-grid">
+          <div><span>STORY DATE</span><b>{lore.date}</b><p>In-universe chronology, not the game release year.</p></div>
+          <div><span>LOCATION</span><b>{lore.location}</b><p>{lore.chapter}</p></div>
+          <div><span>ARCHIVE STATUS</span><b>Source-cited</b><p>{records.length} map-specific intel records indexed.</p></div>
+        </div>
+        <div className="map-story-copy"><h3>{lore.chapter}</h3><p>{lore.summary}</p><h4>Operation outcome</h4><p>{lore.outcome}</p><p className="map-story-sources">{lore.sources.map((source, index) => <span key={source.url}>{index ? ' · ' : ''}<a href={source.url} target="_blank" rel="noreferrer">{source.label} ↗</a></span>)}</p></div>
+      </> : <div className="map-story-copy"><h3>Archive context</h3><p>This operation has a dedicated dossier and collection ledger. A source-verified narrative briefing has not yet been released into the public archive; unverified community claims are deliberately excluded.</p></div>}
+    </section>
+    <section className="dossier-content intel-dossier-section">
       <p className="section-kicker">INTELLIGENCE DATABASE</p>
       <h2>{name} Intel Archive</h2>
       {records.length > 0 ? <>

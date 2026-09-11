@@ -1,6 +1,12 @@
 import type { ResearchSource } from './map-intel';
 
 export const mapResearchSources: Record<string, ResearchSource[]> = {
+  'die-maschine': [{ label: 'SOURCE DOSSIER', title: 'Die Maschine — complete intel index', url: 'https://callofduty.fandom.com/wiki/Die_Maschine/Intel' }],
+  'firebase-z': [{ label: 'SOURCE DOSSIER', title: 'Firebase Z — complete intel index', url: 'https://callofduty.fandom.com/wiki/Firebase_Z/Intel' }],
+  outbreak: [{ label: 'SOURCE DOSSIER', title: 'Outbreak — complete intel index', url: 'https://callofduty.fandom.com/wiki/Outbreak_(Cold_War)/Intel' }],
+  'mauer-der-toten': [{ label: 'SOURCE DOSSIER', title: 'Mauer der Toten — complete intel index', url: 'https://callofduty.fandom.com/wiki/Mauer_der_Toten/Intel' }],
+  forsaken: [{ label: 'SOURCE DOSSIER', title: 'Forsaken — complete intel index', url: 'https://callofduty.fandom.com/wiki/Forsaken/Intel' }],
+  onslaught: [{ label: 'SOURCE DOSSIER', title: 'Zombies Onslaught — complete intel index', url: 'https://callofduty.fandom.com/wiki/Zombies_Onslaught/Intel' }],
   'ashes-of-the-damned': [
     { label: 'INTEL GUIDE', title: 'Zombies Codex — all 26 Intel locations', url: 'https://www.zombiescodex.com/black-ops-7/ashes-of-the-damned/' },
     { label: 'KORBORIUM', title: 'All 9 Relics Explained', url: 'https://www.youtube.com/watch?v=8hXeDoCVZJg' },
