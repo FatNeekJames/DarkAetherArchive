@@ -1,2 +1,15 @@
-const records=[['Fool’s Task','Document','Black Ops 7','CODEx'],['The Planets','Document','Black Ops 7','CODEx'],['Robotics','Audio Log','Black Ops 7','CODEx'],['Dual Functions','Artifact','Black Ops 7','CODEx'],['Immense Power','Document','Black Ops 7','CODEx']];
-export default function IntelArchive(){return <main className="route-page"><header><a href="/">DA / DARK AETHER ARCHIVE</a><nav><a href="/maps">Maps</a><a className="selected" href="/intel">Intel</a><a href="/timeline">Timeline</a><a href="/signals">Signals</a></nav></header><section className="route-hero"><span>INTELLIGENCE INVENTORY</span><h1>Intel archive</h1><p>A citation-first index. Select a record to open its classified case file and map location.</p></section><section className="archive-table"><div className="table-tools"><input placeholder="Search title, map, character, faction…"/><button>FILTER: ALL GAMES</button><button>UNSECURED ONLY</button></div><p className="source-notice">Seeded index entries are attributed to CODEx. Full text, media, and location data require approved source rights before import.</p>{records.map((r,i)=><a className="archive-row" href="/maps" key={r[0]}><span>{String(i+1).padStart(3,'0')}</span><b>{r[0]}</b><small>{r[1]}</small><small>{r[2]}</small><em>SOURCE: {r[3]}</em><i>OPEN FILE →</i></a>)}</section></main>}
+import Link from 'next/link';
+import IntelGameSidebar from '../components/IntelGameSidebar';
+import { mapsForGame, zombieGames, zombieMaps } from '../data/maps';
+
+export default function IntelArchive() {
+  return <main className="route-page">
+    <header><Link href="/">DA / DARK AETHER ARCHIVE</Link><nav><Link href="/maps">Maps</Link><Link className="selected" href="/intel">Intel</Link><Link href="/timeline">Timeline</Link><Link href="/signals">Signals</Link></nav></header>
+    <div className="intel-hub-layout"><IntelGameSidebar /><section className="intel-hub-main">
+      <section className="route-hero"><span>INTELLIGENCE INVENTORY {' // '} {zombieMaps.length} MAP DOSSIERS</span><h1>Intel archive</h1><p>Select a game to browse every map in that release, then open the map-specific Intel archive.</p></section>
+      <div className="intel-game-board">{zombieGames.map(([slug, gameName, shortName], index) => <Link href={`/intel/${slug}`} key={slug}>
+        <span>{String(index + 1).padStart(2, '0')}</span><small>{mapsForGame(gameName).length} MAPS INDEXED</small><h2>{shortName}</h2><b>VIEW GAME ARCHIVE →</b>
+      </Link>)}</div>
+    </section></div>
+  </main>;
+}
