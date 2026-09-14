@@ -18,6 +18,10 @@ export default async function MapDossier({ params }: { params: Promise<{ slug: s
   return <main className="route-page map-dossier">
     <header><Link href="/">DA / DARK AETHER ARCHIVE</Link><nav><Link className="selected" href="/maps">Maps</Link><Link href="/intel">Intel</Link><Link href="/timeline">Timeline</Link><Link href="/signals">Signals</Link></nav></header>
     <section className="map-dossier-hero"><Link href="/maps">← MAP INDEX</Link><span>{game.toUpperCase()}{' // '}OPERATIONAL DOSSIER</span><h1>{name}</h1><p>Map-specific intelligence, collection locations, and evidence recovered from this operation.</p></section>
+    {slug === 'liberty-falls' && <section className="prelaunch-file-callout">
+      <div><span>SUPPLEMENTAL FILE // AUGUST 2024</span><h2>Liberty Falls Pre-Launch Intel</h2><p>Trace the original phone campaign through redacted documents, keyword unlocks, a playable Project Janus audio log, and the first Dark Aether reconnaissance images.</p></div>
+      <Link href="/maps/liberty-falls/pre-launch-intel">OPEN PRE-LAUNCH FILE →</Link>
+    </section>}
     <section className="dossier-content">
       <p className="section-kicker">OPERATIONAL BRIEFING</p>
       <h2>Story and lore</h2>
