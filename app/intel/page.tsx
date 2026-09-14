@@ -1,15 +1,27 @@
 import Link from 'next/link';
-import IntelGameSidebar from '../components/IntelGameSidebar';
-import { mapsForGame, zombieGames, zombieMaps } from '../data/maps';
+import IntelArchiveExplorer, { type IntelExplorerRecord } from '../components/IntelArchiveExplorer';
+import { mapIntel } from '../data/map-intel';
+import { mapResearchSources } from '../data/research-sources';
+import { zombieGames, zombieMaps } from '../data/maps';
+
+const newestMapOrder = ['rex-infernus', 'kowakujo', 'totenreich', 'paradox-junction', 'astra-malorum', 'ashes-of-the-damned', 'reckoning', 'shattered-veil', 'the-tomb', 'citadelle-des-morts', 'terminus', 'liberty-falls', 'forsaken', 'mauer-der-toten', 'outbreak', 'firebase-z', 'die-maschine', 'onslaught'];
 
 export default function IntelArchive() {
-  return <main className="route-page">
+  const gameSlugByName = new Map(zombieGames.map(([slug, name]) => [name, slug]));
+  const mapsBySlug = new Map(zombieMaps.map((map) => [map[0], map]));
+  const records: IntelExplorerRecord[] = newestMapOrder.flatMap((mapSlug) => {
+    const map = mapsBySlug.get(mapSlug);
+    if (!map) return [];
+    const [, mapName, gameName] = map;
+    const gameSlug = gameSlugByName.get(gameName) ?? '';
+    const sourceUrl = mapResearchSources[mapSlug]?.[0]?.url;
+    return (mapIntel[mapSlug] ?? []).map((record, index) => ({ ...record, id: `${mapSlug}:${index}`, mapSlug, mapName, gameSlug, gameName, sourceUrl }));
+  });
+  const games = zombieGames.filter(([, gameName]) => zombieMaps.some(([slug,, mapGame]) => mapGame === gameName && (mapIntel[slug]?.length ?? 0) > 0)).map(([slug,, shortName]) => ({ slug, name: shortName }));
+
+  return <main className="route-page intel-page">
     <header><Link href="/">DA / DARK AETHER ARCHIVE</Link><nav><Link href="/maps">Maps</Link><Link className="selected" href="/intel">Intel</Link><Link href="/timeline">Timeline</Link><Link href="/signals">Signals</Link></nav></header>
-    <div className="intel-hub-layout"><IntelGameSidebar /><section className="intel-hub-main">
-      <section className="route-hero"><span>INTELLIGENCE INVENTORY {' // '} {zombieMaps.length} MAP DOSSIERS</span><h1>Intel archive</h1><p>Select a game to browse every map in that release, then open the map-specific Intel archive.</p></section>
-      <div className="intel-game-board">{zombieGames.map(([slug, gameName, shortName], index) => <Link href={`/intel/${slug}`} key={slug}>
-        <span>{String(index + 1).padStart(2, '0')}</span><small>{mapsForGame(gameName).length} MAPS INDEXED</small><h2>{shortName}</h2><b>VIEW GAME ARCHIVE →</b>
-      </Link>)}</div>
-    </section></div>
+    <section className="route-hero compact-route-hero"><span>INTELLIGENCE INVENTORY {' // '} {records.length} SOURCE-LINKED RECORDS</span><h1>Intel archive</h1><p>Search the latest indexed intel across Black Ops 7, Black Ops 6 and Cold War, then open its map dossier to track collection progress.</p></section>
+    <IntelArchiveExplorer records={records} games={games} />
   </main>;
 }
