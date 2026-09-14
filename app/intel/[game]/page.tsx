@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import IntelGameSidebar from '../../components/IntelGameSidebar';
 import { mapIntel, coldWarIntelTotals } from '../../data/map-intel';
-import { mapsForGame, zombieGames } from '../../data/maps';
+import { standardMapsForGame, zombieGames } from '../../data/maps';
 
 export default async function GameIntelArchive({ params }: { params: Promise<{ game: string }> }) {
   const { game } = await params;
   const selectedGame = zombieGames.find(([slug]) => slug === game);
   const gameName = selectedGame?.[1] ?? 'Unknown game';
   const shortName = selectedGame?.[2] ?? 'INTEL ARCHIVE';
-  const maps = selectedGame ? mapsForGame(gameName) : [];
+  const maps = selectedGame ? standardMapsForGame(gameName) : [];
 
   return <main className="route-page">
     <header><Link href="/">DA / DARK AETHER ARCHIVE</Link><nav><Link href="/maps">Maps</Link><Link className="selected" href="/intel">Intel</Link><Link href="/timeline">Timeline</Link><Link href="/signals">Signals</Link></nav></header>

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import type { IntelRecord, ResearchSource } from '../data/map-intel';
+import { intelRecordSlug } from '../data/intel-details';
 
 type Props = {
   mapSlug: string;
@@ -42,14 +43,13 @@ export default function MapIntelArchive({ mapSlug, mapName, records, sources }: 
     const haystack = `${record.title} ${record.type} ${record.location}`.toLowerCase();
     return matchesType && haystack.includes(query.toLowerCase().trim());
   }), [records, filter, query]);
+  const publicSources = sources.filter((source) => !source.url.includes('docs.google.com'));
 
   const toggle = (id: string) => {
     const next = collected.includes(id) ? collected.filter((item) => item !== id) : [...collected, id];
     setCollected(next);
     window.localStorage.setItem(storageKey, JSON.stringify(next));
   };
-
-  const primarySource = sources[0];
 
   return <>
     <div className="intel-progress" aria-label={`${collected.length} of ${records.length} collected`}>
@@ -69,14 +69,14 @@ export default function MapIntelArchive({ mapSlug, mapName, records, sources }: 
         <button className="intel-check" onClick={() => toggle(id)} aria-label={`${isCollected ? 'Mark uncollected' : 'Mark collected'}: ${record.title}`} aria-pressed={isCollected}>{isCollected ? '✓' : ''}</button>
         <span>{String(originalIndex + 1).padStart(2, '0')}</span>
         <div className="intel-record-copy"><b>{record.title}</b><small>{record.type}{record.faction ? ` · ${record.faction}` : ''}</small><p>{record.location}</p></div>
-        {primarySource ? <a href={primarySource.url} target="_blank" rel="noreferrer">SOURCE ↗</a> : <i>VERIFIED RECORD</i>}
+        <a href={`/maps/${mapSlug}/intel/${intelRecordSlug(record.title)}`}>OPEN INTEL →</a>
       </article>;
     })}</div>
     {visible.length === 0 && <div className="intel-empty"><b>NO MATCHING RECORDS</b><p>Clear the search or select another intel type.</p></div>}
-    {sources.length > 0 && <section className="research-sources">
+    {publicSources.length > 0 && <section className="research-sources">
       <p className="section-kicker">SOURCE DESK</p><h3>Research and listening room</h3>
       <p>Location guides establish the collection data. Korborium videos add voice-line, relic, character, and story context without being presented as official transcripts.</p>
-      <div>{sources.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer"><span>{source.label}</span><b>{source.title}</b><i>OPEN SOURCE ↗</i></a>)}</div>
+      <div>{publicSources.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer"><span>{source.label}</span><b>{source.title}</b><i>OPEN SOURCE ↗</i></a>)}</div>
     </section>}
   </>;
 }

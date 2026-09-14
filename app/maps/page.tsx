@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { mapIntel } from '../data/map-intel';
-import { mapsForGame, zombieGames, zombieMaps } from '../data/maps';
+import { standardMapsForGame, standardZombieMaps, zombieGames } from '../data/maps';
 
 const preferredOrder = ['black-ops-7', 'black-ops-6', 'cold-war', 'modern-warfare-zombies'];
 const orderedGames = [...zombieGames].sort(([a], [b]) => {
@@ -13,9 +13,9 @@ const orderedGames = [...zombieGames].sort(([a], [b]) => {
 export default function Maps() {
   return <main className="route-page maps-page">
     <header><Link href="/">DA / DARK AETHER ARCHIVE</Link><nav><Link className="selected" href="/maps">Maps</Link><Link href="/intel">Intel</Link><Link href="/timeline">Timeline</Link><Link href="/signals">Signals</Link></nav></header>
-    <section className="route-hero compact-route-hero"><span>FIELD OPERATIONS {' // '} {zombieMaps.length} PLAYABLE MAPS</span><h1>Map index</h1><p>Open a game, choose its map, then enter the map-specific story and intel dossier.</p></section>
+    <section className="route-hero compact-route-hero"><span>FIELD OPERATIONS {' // '} {standardZombieMaps.length} STANDARD MAPS</span><h1>Map index</h1><p>Open a game, choose its map, then enter the map-specific story and intel dossier.</p></section>
     <section className="map-accordion" aria-label="Zombies maps grouped by game">{orderedGames.map(([gameSlug, gameName, shortName], gameIndex) => {
-      const maps = mapsForGame(gameName);
+      const maps = standardMapsForGame(gameName);
       const intelCount = maps.reduce((sum, [slug]) => sum + (mapIntel[slug]?.length ?? 0), 0);
       return <details key={gameSlug} open={gameIndex === 0}>
         <summary><div><span>{String(gameIndex + 1).padStart(2, '0')} // {gameName}</span><h2>{shortName}</h2></div><div className="map-summary-meta"><b>{maps.length} MAPS</b><small>{intelCount} INTEL INDEXED</small><i aria-hidden="true">⌄</i></div></summary>

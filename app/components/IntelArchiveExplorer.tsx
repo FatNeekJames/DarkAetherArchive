@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
-export type IntelExplorerRecord = { id: string; title: string; type: string; location: string; faction?: string; mapSlug: string; mapName: string; gameSlug: string; gameName: string; sourceUrl?: string };
+export type IntelExplorerRecord = { id: string; title: string; type: string; location: string; faction?: string; mapSlug: string; mapName: string; gameSlug: string; gameName: string; detailSlug: string };
 type GameOption = { slug: string; name: string };
 
 export default function IntelArchiveExplorer({ records, games }: { records: IntelExplorerRecord[]; games: GameOption[] }) {
@@ -29,7 +29,7 @@ export default function IntelArchiveExplorer({ records, games }: { records: Inte
     <div className="intel-type-filters" aria-label="Filter by intel type">{types.map((option) => <button key={option} className={type === option ? 'active' : ''} onClick={() => setType(option)}>{option}</button>)}</div>
     <div className="recent-intel-list">{visible.map((record, index) => <article key={record.id}>
       <span>{String(index + 1).padStart(2, '0')}</span><div><small>{record.gameName} · {record.mapName}</small><h3>{record.title}</h3><p>{record.location}</p><em>{record.type}{record.faction ? ` · ${record.faction}` : ''}</em></div>
-      <div className="recent-intel-actions"><Link href={`/maps/${record.mapSlug}`}>OPEN DOSSIER →</Link>{record.sourceUrl && <a href={record.sourceUrl} target="_blank" rel="noreferrer">SOURCE ↗</a>}</div>
+      <div className="recent-intel-actions"><Link href={`/maps/${record.mapSlug}/intel/${record.detailSlug}`}>VIEW INTEL →</Link><Link href={`/maps/${record.mapSlug}`}>MAP DOSSIER →</Link></div>
     </article>)}</div>
     {!visible.length && <div className="intel-empty"><b>NO RECORDS FOUND</b><p>Clear the search or choose a different game or intel type.</p></div>}
     {filtered.length > visible.length && <p className="intel-result-note">Showing the first {visible.length} matches. Refine the search to narrow the archive.</p>}

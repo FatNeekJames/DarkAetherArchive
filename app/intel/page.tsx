@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import IntelArchiveExplorer, { type IntelExplorerRecord } from '../components/IntelArchiveExplorer';
 import { mapIntel } from '../data/map-intel';
-import { mapResearchSources } from '../data/research-sources';
+import { intelRecordSlug } from '../data/intel-details';
 import { zombieGames, zombieMaps } from '../data/maps';
 
 const newestMapOrder = ['rex-infernus', 'kowakujo', 'totenreich', 'paradox-junction', 'astra-malorum', 'ashes-of-the-damned', 'reckoning', 'shattered-veil', 'the-tomb', 'citadelle-des-morts', 'terminus', 'liberty-falls', 'forsaken', 'mauer-der-toten', 'outbreak', 'firebase-z', 'die-maschine', 'onslaught'];
@@ -14,8 +14,7 @@ export default function IntelArchive() {
     if (!map) return [];
     const [, mapName, gameName] = map;
     const gameSlug = gameSlugByName.get(gameName) ?? '';
-    const sourceUrl = mapResearchSources[mapSlug]?.[0]?.url;
-    return (mapIntel[mapSlug] ?? []).map((record, index) => ({ ...record, id: `${mapSlug}:${index}`, mapSlug, mapName, gameSlug, gameName, sourceUrl }));
+    return (mapIntel[mapSlug] ?? []).map((record, index) => ({ ...record, id: `${mapSlug}:${index}`, mapSlug, mapName, gameSlug, gameName, detailSlug: intelRecordSlug(record.title) }));
   });
   const games = zombieGames.filter(([, gameName]) => zombieMaps.some(([slug,, mapGame]) => mapGame === gameName && (mapIntel[slug]?.length ?? 0) > 0)).map(([slug,, shortName]) => ({ slug, name: shortName }));
 

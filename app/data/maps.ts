@@ -126,3 +126,5 @@ export const zombieMaps: readonly ZombieMap[] = [
 ] as const;
 
 export const mapsForGame = (gameName: string) => zombieMaps.filter((map) => map[2] === gameName);
+export const standardZombieMaps = zombieMaps.filter((map) => map[3] !== 'Survival');
+export const standardMapsForGame = (gameName: string) => standardZombieMaps.filter((map) => map[2] === gameName);
