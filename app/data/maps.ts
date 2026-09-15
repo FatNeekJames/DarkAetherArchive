@@ -18,6 +18,11 @@ export const zombieGames: readonly ZombieGame[] = [
   ['ghosts-extinction', 'Call of Duty: Ghosts — Extinction', 'GHOSTS EXTINCTION'],
 ] as const;
 
+// Games with collectible intel, ordered newest first.
+export const intelGames = ['black-ops-7', 'black-ops-6', 'cold-war'].map(
+  (slug) => zombieGames.find((game) => game[0] === slug)!,
+);
+
 export const zombieMaps: readonly ZombieMap[] = [
   ['nacht-der-untoten', 'Nacht der Untoten', 'Call of Duty: World at War'],
   ['verruckt', 'Verrückt', 'Call of Duty: World at War'],

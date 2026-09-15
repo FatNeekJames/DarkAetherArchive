@@ -37,6 +37,14 @@ export const mapLore: Record<string, MapLore> = {
     date: 'June–December 1984', location: 'Ural Mountains outbreak zones', chapter: 'Operation Threshold',
     summary: 'Requiem strike teams deploy across enormous Omega-controlled outbreak zones to escort rovers, recover Aetherium, investigate anomalies and disrupt dimensional research. The campaign unfolds through multiple operations rather than one isolated incident.',
     outcome: 'The operations expose Omega’s launch plans and lead through Ruka, Sanatorium and Zoo to Excision on 14 December 1984. Requiem personnel are betrayed and arrested, leaving the organisation vulnerable to its own director’s Project Janus agenda.',
+    questSteps: [
+      { title: 'Main Quest I — investigate the signal', playerAction: 'Reach World Tier 3, tune the unknown radio and match its three signal amplifiers before contacting Samantha Maxis.', storyBeat: 'Maxis warns Requiem that Omega is preparing reality-inversion warheads inside the Ruka missile silo.' },
+      { title: 'Enter the Ruka silos', playerAction: 'Use the beacon to launch the special operation, restore the lift and collect the silo keys needed to interrupt Omega’s launch sequence.', storyBeat: 'Requiem discovers Operatsiya Inversiya: missiles designed to create new outbreak zones rather than destroy them.' },
+      { title: 'Stop Operatsiya Inversiya', playerAction: 'Disable the launch and defeat Legion beneath the silo before the countdown expires.', storyBeat: 'The first Outbreak Main Quest ends with Omega’s immediate launch plan defeated and Ravenov extracted.', boss: true },
+      { title: 'Main Quest II — find the Omega Eight', playerAction: 'Reach World Tier 3, contact Ravenov through the red rifts and recover the modified beacon device that opens the Sanatorium operation.', storyBeat: 'Eight Omega scientists appear ready to defect, giving Requiem a chance to damage Omega from within.' },
+      { title: 'Operation Excision', playerAction: 'Locate the scientists, escort the rover, recover the downed helicopter recorder and fight through the exfil site.', storyBeat: 'The defectors are already dead. The supposed rescue is revealed as an Omega ambush.' },
+      { title: 'Survive the betrayal', playerAction: 'Defeat the Orda and clear the landing zone so Raptor One can extract the strike team.', storyBeat: 'Kravchenko shoots down the helicopter and captures Requiem’s strike team, directly setting up Mauer der Toten.', boss: true },
+    ],
     sources: [{ label: 'Official story recap', url: coldWarRecap }, { label: 'Intel dossier', url: 'https://callofduty.fandom.com/wiki/Outbreak_(Cold_War)/Intel' }],
   },
   'mauer-der-toten': {

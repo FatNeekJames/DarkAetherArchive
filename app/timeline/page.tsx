@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Link from '@/app/components/SiteLink';
 
 type StoryEvent = {
@@ -15,6 +16,22 @@ type StoryConcept = {
   body: string;
 };
 
+type StoryTransition = {
+  afterEvent: number;
+  label: string;
+  title: string;
+  body: string;
+  nextFile: string;
+  source: string;
+};
+
+type StoryAfterword = {
+  label: string;
+  title: string;
+  body: string;
+  nextFile: string;
+};
+
 type StoryChapter = {
   number: string;
   game: string;
@@ -24,6 +41,8 @@ type StoryChapter = {
   concepts: readonly StoryConcept[];
   events: readonly StoryEvent[];
   note?: string;
+  transitions?: readonly StoryTransition[];
+  afterword?: StoryAfterword;
 };
 
 const officialTimeline = 'https://www.callofduty.com/uk/en/zombieschronicles/timeline';
@@ -90,6 +109,15 @@ const chapters: readonly StoryChapter[] = [
       { date: '4 JUN 1918', label: 'DIMENSION 63', title: 'Origins', body: 'The narrative now shifts to Primis. The four build the elemental staffs, free Samantha and receive the mission that drives the next cycle.', slug: 'origins', source: officialTimeline },
       { date: '31 DEC 1933', label: 'PURGATORIAL LOOP', title: 'Mob of the Dead', body: 'Four prisoners repeat their failed Alcatraz escape. The archive places Mob after Origins because its broken cycle is the lock that diverts Primis in Black Ops 4.', slug: 'mob-of-the-dead', source: officialTimeline },
     ],
+    note: 'FILE A // ORIGINAL UNIVERSE — Nuketown, Victis and the three polarization towers continue the Ultimis-era Earth after Moon. This branch ends with the continuity-leading Maxis victory at Buried.',
+    transitions: [{
+      afterEvent: 4,
+      label: 'DIMENSIONAL HANDOFF // ORIGINAL EARTH → DIMENSION 63',
+      title: 'Samantha reaches another Maxis',
+      body: 'Maxis wins the tower struggle at Buried, enters the Aether and begins destroying the ruined Earth while searching for Samantha in Agartha. From there, Samantha reaches across realities to Dimension 63: her voice contacts that world’s Maxis and guides the four younger counterparts who converge at Excavation Site 64. Victis has not travelled back to 1918—the archive has changed universes and crews.',
+      nextFile: 'FILE B // DIMENSION 63 + THE ALCATRAZ CYCLE',
+      source: officialTimeline,
+    }],
   },
   {
     number: 'IV',
@@ -124,17 +152,30 @@ const chapters: readonly StoryChapter[] = [
       { label: 'FINAL DEVICE', title: 'Agarthan Device', body: 'Victis constructs the mechanism Nikolai needs to collapse the corrupted multiverse into the Dark Aether.' },
       { label: 'SEPARATE CONTINUITY', title: 'Chaos Story', body: 'Scarlett’s crew follows Sentinel Artifacts and Prima Materia through its own chronology; it is not folded into Aether release order.' },
     ],
-    note: 'CHAOS READING ORDER // Dead of the Night → Voyage of Despair → IX (an induced vision of antiquity) → Ancient Evil. The cliffhanger remains unresolved in the original Black Ops 4 arc.',
     events: [
-      { date: 'BROKEN ROUTE', label: 'ALCATRAZ', title: 'Blood of the Dead', body: 'The Warden captures Primis during the post-Zetsubou stop. Richtofen dies, Nikolai receives the Kronorium and the route to Revelations is cut off.', slug: 'blood-of-the-dead', source: officialTimeline },
-      { date: 'POST-BLOOD', label: 'GROOM LAKE', title: 'Classified', body: 'The later ending—not the earlier playable Pentagon incident—shows Primis collecting the post-Moon Ultimis crew.', slug: 'classified', source: officialTimeline },
-      { date: 'JOINT OPERATION', label: 'CAMP EDWARD', title: 'Alpha Omega', body: 'Primis and Ultimis uncover Broken Arrow, Rushmore, the Avogadro and the Elemental Shard while Samantha and Eddie escape the American MPD.', slug: 'alpha-omega', source: officialTimeline },
-      { date: 'FINAL OPERATION', label: 'SIBERIA', title: 'Tag der Toten', body: 'Victis assembles the Agarthan Device. Nikolai destroys the Summoning Key and ends Primis and Ultimis so the multiverse can collapse into the Dark Aether.', slug: 'tag-der-toten', source: 'https://callofduty.fandom.com/wiki/Tag_der_Toten' },
+      { date: 'BETWEEN ZETSUBOU + GOROD', label: 'ALCATRAZ DIVERGENCE', title: 'Blood of the Dead', body: 'In the repeating route, Primis briefly stops at Alcatraz after Zetsubou No Shima to collect blood vials before travelling to Gorod Krovi. Because Weasel has broken Mob’s cycle, the Kronorium changes and this same stop becomes Blood of the Dead: the Warden traps Primis, Richtofen dies, Nikolai takes command and the Gorod–Revelations route is abandoned.', slug: 'blood-of-the-dead', source: officialTimeline },
+      { date: '1963 / POST-BLOOD', label: 'TWO TIME LAYERS', title: 'Classified', body: 'The playable Pentagon outbreak follows Ultimis in 1963, before Moon. Its ending jumps forward: after Blood of the Dead, Primis reaches Groom Lake and collects the post-Moon Ultimis crew. Both moments belong to Classified, but they occur decades—and a broken cycle—apart.', slug: 'classified', source: officialTimeline },
+      { date: 'BROKEN-CYCLE ROUTE', label: 'ELEMENTAL SHARD // CAMP EDWARD', title: 'Alpha Omega', body: 'Primis and Ultimis uncover Broken Arrow, Rushmore, the Avogadro and the Elemental Shard while Samantha and Eddie escape the American MPD.', slug: 'alpha-omega', source: officialTimeline },
+      { date: 'AETHER FINALE', label: 'AGARTHAN DEVICE // SIBERIA', title: 'Tag der Toten', body: 'Victis assembles the Agarthan Device. Nikolai destroys the Summoning Key and ends Primis and Ultimis so the paradox-bound multiverse can collapse into the Dark Aether.', slug: 'tag-der-toten', source: 'https://callofduty.fandom.com/wiki/Tag_der_Toten' },
       { date: '20 MAR 1912', label: 'CHAOS PROLOGUE', title: 'Dead of the Night', body: 'At Alistair Rhodes’s estate, the Order kidnaps him and corrupts the guests. This is the chronological opening of the Chaos investigation.', slug: 'dead-of-the-night', source: 'https://callofduty.fandom.com/wiki/Chaos_Story' },
       { date: '14–15 APR 1912', label: 'CHAOS EXPEDITION', title: 'Voyage of Despair', body: 'Scarlett’s crew boards Titanic to steal the Odin Artifact. The Order activates it, transforming those aboard while the ship continues toward disaster.', slug: 'voyage-of-despair', source: 'https://callofduty.fandom.com/wiki/Chaos_Story' },
       { date: 'AFTER VOYAGE', label: 'INDUCED VISION', title: 'IX', body: 'At Delphi, the crew inhales a vapour and experiences an arena trial set in antiquity. The setting is ancient, but the crew undergoes the vision after Titanic.', slug: 'ix', source: 'https://callofduty.fandom.com/wiki/Chaos_Story' },
       { date: 'AFTER 15 APR 1912', label: 'DELPHI', title: 'Ancient Evil', body: 'The crew enters the hidden city, defeats Perseus and discovers that the Oracle is Medusa. She seizes Scarlett and the Library, leaving Chaos unresolved.', slug: 'ancient-evil', source: 'https://callofduty.fandom.com/wiki/Chaos_Story' },
     ],
+    transitions: [{
+      afterEvent: 4,
+      label: 'CONTINUITY SEAL // AETHER STORY ENDS',
+      title: 'The multiverse is banished to the Dark Aether',
+      body: 'Nikolai’s solution does not repair the old branches. The corrupted multiverse, Element 115 and its repeating paradoxes are collapsed and cast into the Dark Aether. Samantha and Eddie alone walk into a newly formed, single universe. The records below are therefore not the next Aether mission: they are the separate Chaos continuity released alongside the finale.',
+      nextFile: 'SEPARATE FILE // CHAOS STORY',
+      source: 'https://www.callofduty.com/en/blog/2018-10/new-zombies-adventures.html',
+    }],
+    afterword: {
+      label: 'UNIVERSE RESET // OLD AETHER SEALED',
+      title: 'A new universe begins',
+      body: 'The Aether story’s multiverse is gone, but everything banished from it remains inside the Dark Aether. The next connected chapter starts in this single universe during 1944, when the Endstation breach lets ancient Dark Aether entities and their artifacts reach humanity.',
+      nextFile: 'NEXT CONTINUITY // DARK AETHER STORY',
+    },
   },
   {
     number: 'VI',
@@ -281,7 +322,8 @@ export default function Timeline() {
 
       <section className="timeline-chapters">
         {chapters.map((chapter) => (
-          <article className="timeline-chapter" key={chapter.number}>
+          <Fragment key={chapter.number}>
+          <article className="timeline-chapter">
             <div className="timeline-chapter-head">
               <div>
                 <span>CHAPTER {chapter.number}{' // '}{chapter.era}</span>
@@ -304,8 +346,11 @@ export default function Timeline() {
             {chapter.note ? <aside className="timeline-branch-note"><b>ARCHIVE NOTE</b><p>{chapter.note}</p></aside> : null}
 
             <div className="timeline-list">
-              {chapter.events.map((event, index) => (
-                <article key={`${chapter.number}-${event.title}-${index}`}>
+              {chapter.events.map((event, index) => {
+                const transition = chapter.transitions?.find((item) => item.afterEvent === index + 1);
+
+                return <Fragment key={`${chapter.number}-${event.title}-${index}`}>
+                <article>
                   <time>{event.date}</time>
                   <div>
                     <span>{String(index + 1).padStart(2, '0')}{' // '}{event.label}</span>
@@ -314,9 +359,30 @@ export default function Timeline() {
                     <p className="timeline-citation"><a href={event.source} target="_blank" rel="noreferrer">SOURCE FILE ↗</a> · <Link href={`/maps/${event.slug}`}>OPEN MAP DOSSIER →</Link></p>
                   </div>
                 </article>
-              ))}
+                {transition ? (
+                  <aside className="timeline-transition">
+                    <span>{transition.label}</span>
+                    <div>
+                      <h3>{transition.title}</h3>
+                      <p>{transition.body}</p>
+                      <a href={transition.source} target="_blank" rel="noreferrer">REFERENCE FILE ↗</a>
+                    </div>
+                    <b>{transition.nextFile}</b>
+                  </aside>
+                ) : null}
+                </Fragment>;
+              })}
             </div>
           </article>
+          {chapter.afterword ? (
+            <aside className="timeline-era-reset">
+              <span>{chapter.afterword.label}</span>
+              <h2>{chapter.afterword.title}</h2>
+              <p>{chapter.afterword.body}</p>
+              <b>{chapter.afterword.nextFile}</b>
+            </aside>
+          ) : null}
+          </Fragment>
         ))}
       </section>
 
