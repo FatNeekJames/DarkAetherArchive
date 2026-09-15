@@ -1,13 +1,13 @@
 import Link from '@/app/components/SiteLink';
 import { mapIntel } from './data/map-intel';
-import { standardMapsForGame, standardZombieMaps, intelGames } from './data/maps';
+import { standardMapsForGame, standardZombieMaps, intelGames, zombieGameGroups } from './data/maps';
 
 export default function Home() {
   const indexedIntel = Object.values(mapIntel).reduce((total, records) => total + records.length, 0);
 
   return <main className="archive-shell">
     <header className="topbar"><Link className="brand" href="/"><span className="brand-mark">DA</span><span>DARK AETHER<br/><b>ARCHIVE</b></span></Link><nav><Link className="active" href="/">Dashboard</Link><Link href="/maps">Maps</Link><Link href="/intel">Intel archive</Link><Link href="/timeline">Timeline</Link><Link href="/signals">Signals archive</Link></nav><button className="profile-button">SIGN IN <span>↗</span></button></header>
-    <section className="home-dashboard"><aside className="dashboard-rail"><span className="rail-title">CALL OF DUTY INTEL</span><Link className="rail-current" href="/">❯ Welcome</Link><Link href="/maps">❯ All Zombies Maps</Link><span className="rail-heading">INTEL BY GAME</span>{intelGames.map(([slug,,shortName]) => <Link href={`/intel/${slug}`} key={slug}>❯ {shortName} Intel</Link>)}</aside>
+    <section className="home-dashboard"><aside className="dashboard-rail"><span className="rail-title">CALL OF DUTY INTEL</span><Link className="rail-current" href="/">❯ Welcome</Link><Link href="/maps">❯ All Zombies Maps</Link><span className="rail-heading">INTEL BY GAME</span>{zombieGameGroups.map((group) => <div className="rail-game-group" key={group.label}><span className="rail-group-heading">{group.label}</span>{group.games.map(([slug,,shortName]) => <Link href={`/intel/${slug}`} key={slug}>❯ {shortName} Intel</Link>)}</div>)}</aside>
       <section className="dashboard-main"><span className="eyebrow">DARK AETHER ZOMBIES INTEL INDEX</span><h1>Welcome, <em>operative.</em></h1><p className="dashboard-lede">Call of Duty Zombies pits survivors against relentless undead hordes, while hidden experiments, secret factions, and otherworldly forces shape the story. Explore the Dark Aether through the documents, transmissions, artifacts, and audio logs left behind.</p>
         <div className="dashboard-status"><span>ARCHIVE STATUS</span><b>{standardZombieMaps.length} MAP DOSSIERS <i>ONLINE</i></b><div className="dashboard-progress"><i style={{width:'100%'}}/></div><small>{indexedIntel} ITEM-LEVEL INTEL RECORDS CURRENTLY INDEXED</small></div>
         <div className="game-cards">{intelGames.map((game) => {

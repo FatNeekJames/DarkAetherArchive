@@ -23,6 +23,30 @@ export const intelGames = ['black-ops-7', 'black-ops-6', 'cold-war'].map(
   (slug) => zombieGames.find((game) => game[0] === slug)!,
 );
 
+// Storyline groupings used by the navigation. Black Ops 4 is filed under
+// Chaos here so each game has one clear home in the game-level index.
+export const zombieGameGroups = [
+  {
+    label: 'DARK AETHER',
+    games: ['black-ops-7', 'black-ops-6', 'modern-warfare-zombies', 'vanguard', 'cold-war'],
+  },
+  {
+    label: 'AETHER',
+    games: ['black-ops-3', 'black-ops-2', 'black-ops', 'world-at-war'],
+  },
+  {
+    label: 'CHAOS',
+    games: ['black-ops-4'],
+  },
+  {
+    label: 'OTHER',
+    games: ['wwii', 'infinite-warfare', 'advanced-warfare', 'ghosts-extinction'],
+  },
+].map((group) => ({
+  ...group,
+  games: group.games.map((slug) => zombieGames.find((game) => game[0] === slug)!),
+}));
+
 export const zombieMaps: readonly ZombieMap[] = [
   ['nacht-der-untoten', 'Nacht der Untoten', 'Call of Duty: World at War'],
   ['verruckt', 'Verrückt', 'Call of Duty: World at War'],
