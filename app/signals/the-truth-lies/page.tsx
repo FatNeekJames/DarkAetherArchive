@@ -75,6 +75,7 @@ export default function TheTruthLiesCaseFile() {
         <div><dt>WARZONE OPERATION</dt><dd>3–6 June 2024</dd></div>
         <div><dt>PRIMARY SUBJECTS</dt><dd>Adler · Livingstone · The Pantheon</dd></div>
       </dl>
+      <Link className="truth-lies-broadcast-link" href="/signals/the-truth-lies/channels"><span>INTERACTIVE ARCHIVE</span><b>OPEN THE EIGHT-CHANNEL TELEVISION</b><i>ENTER BROADCAST ROOM →</i></Link>
     </section>
 
     <section className="truth-lies-overview">
