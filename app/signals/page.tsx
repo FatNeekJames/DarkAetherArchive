@@ -47,7 +47,7 @@ const cases = [
 ] as const;
 
 export default function Signals(){return <main className="route-page signals-page"><header><Link href="/">DA / DARK AETHER ARCHIVE</Link><nav><Link href="/maps">Maps</Link><Link href="/intel">Intel</Link><Link href="/timeline">Timeline</Link><Link className="selected" href="/signals">Signals</Link></nav></header>
-  <section className="route-hero compact-route-hero"><span>SIGNALS ARCHIVE // ARG CASE FILES</span><h1>Reveal investigations</h1><p>Open each case to follow the evidence in order, with original and preserved sources attached to every chapter.</p></section>
+  <section className="route-hero compact-route-hero"><span>BLACK SITE ARCHIVE // ARG CASE FILES</span><h1>Covert investigations</h1><p>Open each compartmentalized file to follow the evidence in order, with original and preserved sources attached to every chapter.</p></section>
   <section className="signal-case-list">{cases.map((entry, caseIndex) => <details key={entry.title} open={caseIndex === 0}>
     <summary><div><span>CASE {entry.number} // {entry.date}</span><h2>{entry.title}</h2><p>{entry.subtitle}</p></div><i aria-hidden="true">OPEN FILE ⌄</i></summary>
     <div className="signal-case-body"><p className="signal-case-summary">{entry.summary}</p>{entry.number === '02' && <Link className="signal-full-file" href="/signals/the-truth-lies">OPEN COMPLETE CASE FILE →</Link>}<div className="signal-chapters">{entry.chapters.map(([title, body], index) => <article key={title}><b>{String(index + 1).padStart(2, '0')}</b><div><h3>{title}</h3><p>{body}</p></div></article>)}</div>

@@ -22,7 +22,7 @@ The 390 × 844 comparison confirms that the reference television scales without 
 - Screen aperture: the live video aligns with the photographed CRT opening and retains the rounded screen edge. Channel 01 is cropped to its inner broadcast, eliminating the recorded TV-inside-TV frame.
 - Physical controls: transparent semantic controls align with VOL up/down, CH up/down, POWER, REC, and PAUSE in the source photograph. Keyboard focus produces a visible outline without replacing the photographed buttons.
 - Typography: labels embedded in the source photograph remain raster-authentic. Archive-only text uses the existing Dark Aether serif/technical type system and stays outside the console.
-- Color: the near-black console, muted CRT footage, purple archive accent, and restrained grey readout preserve the source’s low-light hierarchy.
+- Color: the near-black console, muted CRT footage, restrained black-site file tone, and grey readout preserve the source’s low-light hierarchy while separating ARG material from the purple Zombies archive.
 - Image quality: the original console image is used at its native aspect ratio. Videos were web-optimized to H.264/AAC and retain their original crops except Channel 01’s user-requested screen isolation.
 - Copy: control instructions match the implemented behavior; REC downloads the active channel rather than implying live recording.
 
