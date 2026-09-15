@@ -19,87 +19,75 @@ The official 2017 *Zombies Chronicles* timeline is the authority for the pre-*Bl
 | Chaos | **[Confirmed]** The Order pursues Sentinel Artifacts and Prima Materia; Scarlett's party follows Alistair's trail through artifact trials. | **[Confirmed]** *Ancient Evil* ends with Medusa holding the Library and a transformed Scarlett, leaving the original Chaos arc unresolved. |
 | Dark Aether | **[Confirmed]** Requiem and Omega exploit breaches in the new universe; Project Janus pursues resurrection; the BO6 crew is cast into the Dark Aether and fights the Warden in BO7. | **[Confirmed]** *Rex Infernus* defeats the Warden, closes Ex-Requiem's causal loop and sends the alternate Aether four toward an unknown destination. |
 
-## Aether story — chronological narrative
+## Aether story — recommended narrative order
 
-### Before recorded human history
+The Aether story is presented here in the order a reader should learn it, not by sorting destination years. That keeps the original mystery intact: first Group 935 and Ultimis, then Richtofen's Grand Scheme, Moon's destruction of Earth, Victis and the Maxis ending of *Buried*, and only then the transition to Primis, the Mob cycle, Black Ops 3 and the broken-cycle Black Ops 4 conclusion. **[Confirmed]**[^1]
 
-- **[Confirmed]** The Keepers encounter the corruptive force later associated with the Dark Aether. A faction becomes the Apothicons; conflict between the two groups establishes the ancient war behind the Summoning Key, the Aether and the later Great War legends.[^3]
-- **[Confirmed]** Dr. Monty and the Shadowman are opposing manifestations within that ancient conflict. Both manipulate human actors rather than serving as simple creator-and-destroyer opposites.
-- **[Confirmed]** The Great War is also the end point of the repeating Primis cycle: after *Revelations*, Monty sends Primis into the ancient past, where they become the warriors already depicted in legend. Cause and consequence therefore form a loop.
-
-### 1918 — Dimension 63 and Origins
-
-- **[Confirmed]** In northern France on 4 June 1918, alternate younger versions of Richtofen, Dempsey, Takeo and Nikolai converge at Excavation Site 64. Element 115, Group 935's precursors, the ancient mound and Samantha's calls bind them into the crew later called Primis.[^4]
-- **[Confirmed]** In *Origins*, Primis builds and upgrades the four elemental staffs, releases Samantha from Agartha and learns that their task extends beyond the battlefield. The ending's childlike House imagery is a real layer of the story, not evidence that all previous events were only a child's fiction.
-- **[Confirmed]** This Richtofen has already begun using the Kronorium and blood-vial contingencies. His effort to save selected souls will drive the BO3 cycle.
-
-### 1933 — Alcatraz and the Mob cycle
-
-- **[Confirmed]** Billy Handsome, Sal DeLuca, Finn O'Leary and Albert “Weasel” Arlington repeatedly die and return in a purgatorial Alcatraz on New Year's Eve 1933. Their failed escape on Icarus is reenacted as *Mob of the Dead*.[^5]
-- **[Confirmed]** If the three mobsters kill Weasel, the cycle continues. If Weasel kills them, the cycle is broken. The broken result later changes the Kronorium and prevents Primis from following the usual post-Zetsubou route.
-- **[Confirmed]** Because the prison is a pocket outside ordinary causality, “1933” identifies the remembered murder and escape; repetitions are not a series of later calendar years.
-
-### 1940s — Group 935 creates the modern crisis
+### 1. Group 935 and the World at War chain
 
 - **[Confirmed]** Dr. Ludvig Maxis and Dr. Edward Richtofen build Group 935's teleportation and weapons programme around Element 115. Richtofen's secret work with the Illuminati, the Moon Pyramid Device and the Shadowman diverges from Maxis's stated scientific mission.[^1]
-- **[Confirmed]** Samantha Maxis and her dog Fluffy are drawn into the experiments. After Maxis's betrayal and Samantha's entry into the Moon Pyramid Device, Samantha controls the undead and directs them against Richtofen.
-
-### 1945 — World at War chain
-
+- **[Confirmed]** Samantha Maxis and her dog Fluffy are drawn into the experiments. After Richtofen betrays Maxis and Samantha enters the Moon Pyramid Device, Samantha controls the undead and turns them against him.
 - **[Confirmed]** *Nacht der Untoten* is the ground-level beginning of the playable outbreak record: soldiers are trapped at an airfield bunker amid the results of 115 experimentation. It contains no completed cinematic quest, so later radios and timeline documents supply most of its placement.[01-world-at-war.md](01-world-at-war.md#nacht-der-untoten)
 - **[Confirmed]** *Verrückt* records the failed extraction of Peter McCain from Wittenau Sanatorium. Dempsey is captured, the Marines are destroyed and Richtofen's future test subjects are drawn into Group 935's orbit.[01-world-at-war.md](01-world-at-war.md#verrückt)
 - **[Confirmed]** At *Shi No Numa*, Ultimis—Richtofen, Dempsey, Takeo and Nikolai—forms around Division 9's Rising Sun facility. Peter's hanging body, the 115 meteor and Richtofen's messages turn the four survivors into a directed expedition.[01-world-at-war.md](01-world-at-war.md#shi-no-numa)
 - **[Confirmed]** On 28 October 1945, Ultimis returns to *Der Riese*. Teleporters, Pack-a-Punch and Maxis's recorded betrayal expose Richtofen's hand; an overload sends the crew forward rather than ending the outbreak.[01-world-at-war.md](01-world-at-war.md#der-riese)
 
-### 1963–2011 destination sequence — Ultimis pursues the Grand Scheme
+### 2. Ultimis and Richtofen's Grand Scheme
 
-- **[Confirmed]** *Kino der Toten* occurs at a Berlin Group 935 theatre on 28 October 1963. Ultimis arrives from 1945, repairs the teleporter and continues following clues toward Richtofen's equipment.[02-black-ops-1.md](02-black-ops-1.md#kino-der-toten)
-- **[Confirmed]** The *Classified* playable incident occurs around the Pentagon outbreak and sits between the Shangri-La journey and Moon in Ultimis's route. Its ending scene belongs much later and must not be placed here.[^6]
-- **[Confirmed]** *Ascension* brings Ultimis to the Soviet Cosmodrome while the Pentagon cast fights the concurrent *Five* outbreak. The crew frees Gersh from the Casimir mechanism and obtains another part of Richtofen's plan.[02-black-ops-1.md](02-black-ops-1.md#ascension)
+- **[Confirmed]** *Kino der Toten* occurs at a Berlin Group 935 theatre on 28 October 1963. Ultimis arrives from 1945, repairs the teleporter and continues following clues toward the equipment Richtofen needs.[02-black-ops-1.md](02-black-ops-1.md#kino-der-toten)
+- **[Confirmed]** *Ascension* brings Ultimis to the Soviet Cosmodrome while the Pentagon cast fights the concurrent *Five* outbreak. The crew frees Gersh from the Casimir mechanism and advances Richtofen's plan.[02-black-ops-1.md](02-black-ops-1.md#ascension)
 - **[Confirmed]** At *Call of the Dead*, in Siberia during 2011, Ultimis is trapped behind a sealed door while a film crew confronts George Romero and the undead. The celebrities recover the Golden Rod for Richtofen.[02-black-ops-1.md](02-black-ops-1.md#call-of-the-dead)
-- **[Confirmed]** At *Shangri-La*, a site held in a time loop, Brock and Gary repeatedly fail while Ultimis uses the eclipse mechanism to acquire the Focusing Stone. The destination's date and geography are less stable than the crew sequence; the important confirmed relation is that it follows the Golden Rod and precedes Moon.[02-black-ops-1.md](02-black-ops-1.md#shangri-la)
+- **[Confirmed]** At *Shangri-La*, Brock and Gary are caught in a time loop while Ultimis uses the eclipse mechanism to acquire the Focusing Stone. Its destination date is less important than its firm narrative position: after the Golden Rod and before Moon.[02-black-ops-1.md](02-black-ops-1.md#shangri-la)
+- **[Confirmed]** The playable *Classified* Pentagon incident fits into Ultimis's pre-Moon journey, but its ending scene belongs to the later broken-cycle story and is held back until Black Ops 4 below.[^6]
 
-### 2025 — Moon, Nuketown and the ruined Earth
+### 3. Moon and Nuketown — Earth is broken
 
 - **[Confirmed]** On 13 October 2025, Ultimis reaches Griffin Station in *Moon*. Richtofen combines the Golden Rod and Focusing Stone, exchanges bodies with Samantha inside the MPD and gains control of the undead.[^1]
 - **[Confirmed]** Maxis convinces the remaining crew to launch missiles at Earth. The strike fractures rather than saves the planet; Richtofen remains in the Aether and Samantha occupies Richtofen's body.[02-black-ops-1.md](02-black-ops-1.md#moon)
 - **[Confirmed]** *Nuketown Zombies* unfolds at the Nevada site during the Moon catastrophe. Richtofen's and Samantha's eye-colour/control transition and the arriving missile make the concurrence observable in play.[03-black-ops-2.md](03-black-ops-2.md#tranzit--green-run)
 
-### 2035 — Victis and the polarization towers
+### 4. Victis and the Maxis ending of Buried
 
-- **[Confirmed]** In *TranZit/Green Run*, Samuel Stuhlinger, Abigail “Misty” Briarton, Marlton Johnson and Russman—Victis—cross a devastated Washington state while Maxis and Richtofen issue incompatible tower instructions.[03-black-ops-2.md](03-black-ops-2.md#tranzit--green-run)
-- **[Confirmed]** In *Die Rise*, Victis is moved to a shattered Shanghai skyscraper complex and activates a second polarization device. Richtofen alone can speak directly through Stuhlinger because of his consumption of zombie flesh.[03-black-ops-2.md](03-black-ops-2.md#die-rise)
-- **[Confirmed]** On 31 December 2035, *Buried* takes Victis to an underground Western town in Angola. The canonical continuation used by later Aether material is the Maxis side: Maxis gains control, displaces Richtofen into a zombie and threatens the remaining world while trying to reach Samantha.[^7]
-- **[Confirmed]** The Richtofen quest outcome is a playable alternative, but later maps do not continue from his global victory. It belongs in the archive as a non-continuing branch, not deleted content.
+- **[Confirmed]** In *TranZit/Green Run*, Samuel Stuhlinger, Abigail “Misty” Briarton, Marlton Johnson and Russman—Victis—cross the devastated Earth while Maxis and Richtofen issue incompatible instructions for the polarization towers.[03-black-ops-2.md](03-black-ops-2.md#tranzit--green-run)
+- **[Confirmed]** In *Die Rise*, Victis is displaced to a shattered Shanghai skyscraper complex and activates a second tower. Richtofen alone can speak directly through Stuhlinger because Stuhlinger consumed zombie flesh.[03-black-ops-2.md](03-black-ops-2.md#die-rise)
+- **[Confirmed]** On 31 December 2035, *Buried* takes Victis to an underground Western town in Angola. Completing the Maxis side of the three-map super Easter egg gives the branch continued by later Aether material: Maxis gains control, displaces Richtofen into a zombie and begins destroying the remaining Earth while trying to reach Samantha.[^7]
+- **[Confirmed]** The Richtofen super Easter egg is also playable, but later Aether chapters do not continue from his victory. It remains an alternate branch rather than the transition used for the main archive narrative.
+- **[Confirmed]** The story now transitions to *Origins*. This is a narrative handoff into another dimension and crew, not Victis physically travelling from 2035 to 1918.
 
-### The Primis cycle — release order becomes causal order
+### 5. Origins — the Primis story begins
 
-- **[Confirmed]** *Origins* creates Primis in Dimension 63; *Shadows of Evil* then supplies the Summoning Key in Morg City, where the Shadowman tricks Nero, Jessica, Jack and Floyd into opening his route.[04-black-ops-3.md](04-black-ops-3.md#shadows-of-evil)
-- **[Confirmed]** Primis Richtofen takes the Summoning Key and leaves the Shadows crew unable to follow. Their fate and the city's absorption establish the cost of Richtofen treating other people as pieces in his insurance plan.
+- **[Confirmed]** In Dimension 63 on 4 June 1918, younger alternate versions of Richtofen, Dempsey, Takeo and Nikolai converge at Excavation Site 64 and become the crew called Primis.[^4]
+- **[Confirmed]** In *Origins*, Primis builds and upgrades the four elemental staffs, releases Samantha from Agartha and learns that their task extends beyond the battlefield. The ending's House imagery is a real story layer, not evidence that the preceding maps were only a child's fiction.[03-black-ops-2.md](03-black-ops-2.md#origins)
+- **[Confirmed]** Primis Richtofen's access to the Kronorium and his blood-vial contingencies leads into the soul-collection mission followed in Black Ops 3.
+
+### 6. Mob of the Dead — the cycle's lock and key
+
+- **[Confirmed]** After introducing Primis through *Origins*, the archive next explains *Mob of the Dead* because Alcatraz determines whether Primis's later route repeats or breaks. The remembered event itself occurs on New Year's Eve 1933.[^5]
+- **[Confirmed]** Billy Handsome, Sal DeLuca, Finn O'Leary and Albert “Weasel” Arlington repeatedly die and return in purgatorial Alcatraz. Their failed escape on Icarus is reenacted each cycle.[03-black-ops-2.md](03-black-ops-2.md#mob-of-the-dead)
+- **[Confirmed]** If the three mobsters kill Weasel, the cycle continues. If Weasel kills them, the cycle is broken. The broken state later changes the Kronorium and diverts Primis into *Blood of the Dead*.
+- **[Confirmed]** Because the prison is a pocket outside ordinary causality, 1933 identifies the murder and failed escape being repeated; it does not mean the Primis story should be read before World at War.
+
+### 7. Black Ops 3 — the repeating Primis cycle
+
+- **[Confirmed]** *Shadows of Evil* supplies the Summoning Key in Morg City, where the Shadowman tricks Nero, Jessica, Jack and Floyd into opening his route. Primis Richtofen takes the Key and leaves the Shadows crew behind.[04-black-ops-3.md](04-black-ops-3.md#shadows-of-evil)
 - **[Confirmed]** In *The Giant*, Primis confronts an older Richtofen at Der Riese. Young Richtofen kills him and the group begins collecting the souls of their alternate selves.[04-black-ops-3.md](04-black-ops-3.md#the-giant)
 - **[Confirmed]** *Der Eisendrache* targets Ultimis Dempsey. Primis destroys the Moon installation in that dimension and captures Dempsey's soul after his death.[04-black-ops-3.md](04-black-ops-3.md#der-eisendrache)
-- **[Confirmed]** *Zetsubou No Shima* targets Takeo. The dying older Takeo accepts the truth of the Emperor's betrayal and permits Primis Takeo to take his soul; Richtofen also secures the Alcatraz blood vials.[04-black-ops-3.md](04-black-ops-3.md#zetsubou-no-shima)
+- **[Confirmed]** *Zetsubou No Shima* targets Takeo. The dying older Takeo accepts the Emperor's betrayal and permits Primis Takeo to take his soul; Richtofen also secures the Alcatraz blood vials.[04-black-ops-3.md](04-black-ops-3.md#zetsubou-no-shima)
+- **[Confirmed]** In the cycle-continuing route, Primis travels to *Gorod Krovi*, kills the Ultimis Nikolai whose soul has not been preserved and completes Richtofen's collection.[04-black-ops-3.md](04-black-ops-3.md#gorod-krovi)
+- **[Confirmed]** In *Revelations*, the Shadowman invades Monty's perfect world. Primis imprisons him in the Summoning Key, but the crew's blood makes them paradoxes Monty cannot simply erase.[04-black-ops-3.md](04-black-ops-3.md#revelations)
+- **[Confirmed]** Monty sends Primis into the ancient Great War, where they become the legendary warriors whose history feeds back toward *Origins*. The Keepers, Apothicons, Monty and Shadowman form the ancient cosmology behind this repeating loop.[^3]
 
-### Cycle-continuing branch — Gorod Krovi to Revelations
+### 8. Black Ops 4 — the cycle breaks
 
-- **[Confirmed]** In the cycle that continues, Primis travels from Zetsubou to *Gorod Krovi*, kills the Ultimis Nikolai who lacks a preserved soul and completes Richtofen's collection.[04-black-ops-3.md](04-black-ops-3.md#gorod-krovi)
-- **[Confirmed]** In *Revelations*, the Shadowman invades Monty's perfect world. Primis and allies imprison him in the Summoning Key, but the crew's blood makes them paradoxes Monty cannot simply erase.[04-black-ops-3.md](04-black-ops-3.md#revelations)
-- **[Confirmed]** Monty sends Primis to the Great War, where they become the legendary warriors who will eventually lead into Origins and repeat the cycle. This is the loop's completion, not the final Aether ending.
-
-### Cycle-breaking branch — Blood of the Dead
-
-- **[Confirmed]** When Weasel has broken the Mob cycle, the Kronorium changes. Primis is trapped during the Alcatraz stop in *Blood of the Dead*, so the normal route to Gorod Krovi and *Revelations* no longer occurs.[05-black-ops-4.md](05-black-ops-4.md#blood-of-the-dead)
+- **[Confirmed]** Black Ops 4 follows the version of events in which Weasel broke the Mob cycle. During Primis's post-Zetsubou Alcatraz stop in *Blood of the Dead*, the Kronorium changes and the route to *Gorod Krovi* and *Revelations* is interrupted.[05-black-ops-4.md](05-black-ops-4.md#blood-of-the-dead)
 - **[Confirmed]** The Warden/Brutus uses the Dark Mechanism to drain Primis Richtofen's blood. A post-*Revelations* Richtofen emerges from cryostasis, destroys the prison's controlling structure and leaves the dying Richtofen behind.
-- **[Confirmed]** Nikolai receives the Kronorium and assumes leadership because his soul was not placed in the House. That difference makes him able to carry out the final plan.
-
-### Post-Moon convergence — Classified, Alpha Omega and Tag der Toten
-
-- **[Confirmed]** The *Classified* ending shows Primis arriving at Groom Lake and taking the post-Moon Ultimis crew. The scene belongs after *Blood of the Dead*, despite the playable Pentagon outbreak occurring before Moon.[05-black-ops-4.md](05-black-ops-4.md#classified)
-- **[Confirmed]** In *Alpha Omega*, Primis and Ultimis enter Camp Edward/Nuketown together. Rushmore, Broken Arrow experiments, the Avogadro and the Elemental Shard connect the ruined-Earth programme to earlier 115 research.[05-black-ops-4.md](05-black-ops-4.md#alpha-omega)
+- **[Confirmed]** Nikolai receives the Kronorium and assumes leadership because his soul was never placed in the House. That difference makes him able to carry out the final plan.
+- **[Confirmed]** The *Classified* ending now becomes relevant: Primis reaches Groom Lake and takes the post-Moon Ultimis crew. This ending is later than the playable Pentagon incident.[05-black-ops-4.md](05-black-ops-4.md#classified)
+- **[Confirmed]** In *Alpha Omega*, Primis and Ultimis enter Camp Edward/Nuketown together. Rushmore, Broken Arrow, the Avogadro and the Elemental Shard connect the ruined-Earth programme to earlier 115 research.[05-black-ops-4.md](05-black-ops-4.md#alpha-omega)
 - **[Confirmed]** Samantha and Eddie leave the American Pyramid Device. The adult Maxis is killed by Monty, and Samantha commits herself to fighting him.
-- **[Confirmed]** In *Tag der Toten*, Nikolai sends Victis to the Siberian facility to assemble the Agarthan Device. Pablo escapes toward the Great War, completing the exchange that allowed the post-*Revelations* Richtofen to reach Alcatraz.[05-black-ops-4.md](05-black-ops-4.md#tag-der-toten)
+- **[Confirmed]** In *Tag der Toten*, Nikolai sends Victis to the Siberian facility to assemble the Agarthan Device. Pablo escapes toward the Great War, completing the exchange that allowed post-*Revelations* Richtofen to reach Alcatraz.[05-black-ops-4.md](05-black-ops-4.md#tag-der-toten)
 - **[Confirmed]** Nikolai destroys the Summoning Key and poisons Primis and Ultimis; Samantha kills Nikolai at his request. The multiverse, its 115 corruption and its paradox-bound inhabitants are consigned to the Dark Aether.
-- **[Confirmed]** Child Samantha and Eddie walk into the newly created single universe. This is the direct creation-state from which the Dark Aether saga later develops, even though the next playable story jumps many decades forward.[^8]
+- **[Confirmed]** Child Samantha and Eddie walk into the new single universe. This ends the Aether story and creates the starting condition for the Dark Aether saga.[^8]
 
 ## Chaos story — its own chronology
 
@@ -215,7 +203,7 @@ The official 2017 *Zombies Chronicles* timeline is the authority for the pre-*Bl
 
 ### Dates that should not be flattened
 
-- **[Confirmed]** *Shangri-La* has a time-looped destination and a clear crew position but contested/simple calendar labelling. Store sequence and destination date separately.
+- **[Confirmed]** *Shangri-La* has a time-looped destination and a clear crew position but contested calendar labelling. Store sequence and destination date separately.
 - **[Confirmed]** *Classified* requires two timeline records: Pentagon incident and post-*Blood* ending.
 - **[Confirmed]** *IX* requires an experienced date (after Titanic in 1912) and a vision setting (antiquity).
 - **[Confirmed]** BO7 maps require a crew-order field and “Dark Aether/non-linear” date state, not invented Earth dates.
@@ -229,7 +217,7 @@ The official 2017 *Zombies Chronicles* timeline is the authority for the pre-*Bl
 
 ## Recommended archive ordering
 
-- **[Confirmed]** For learning the Aether plot, present the original Ultimis/Victis chain first, then Primis's repeating route, then the cycle-breaking BO4 route. A simple year sort would put *Origins* and *Mob* too early to explain their narrative function.
+- **[Confirmed]** For learning the Aether plot, present World at War/Ultimis → Richtofen's Grand Scheme → *Moon* and *Nuketown* → Victis and the Maxis ending of *Buried* → *Origins* → *Mob of the Dead* → the Black Ops 3 cycle → the Black Ops 4 broken-cycle conclusion. Keep dates as metadata rather than using them to sort the narrative.
 - **[Confirmed]** Present Chaos as Dead of the Night → Voyage of Despair → IX → Ancient Evil, while displaying IX's ancient vision as nested time.
 - **[Confirmed]** Present Dark Aether as Die Maschine → Firebase Z → Outbreak operations → Mauer der Toten → Forsaken → Terminus/Liberty Falls → Citadelle → Tomb → Shattered Veil → Reckoning → the six BO7 maps.
 - **[Confirmed]** Add optional bridge cards for Vanguard and Operation Deadbolt wherever their evidence becomes necessary, without mixing their maps into the requested Treyarch round-based index.
