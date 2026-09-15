@@ -2,19 +2,20 @@ export type ZombieGame = readonly [slug: string, name: string, shortName: string
 export type ZombieMap = readonly [slug: string, name: string, game: string, edition?: string];
 
 export const zombieGames: readonly ZombieGame[] = [
-  ['world-at-war', 'Call of Duty: World at War', 'WORLD AT WAR'],
-  ['black-ops', 'Call of Duty: Black Ops', 'BLACK OPS'],
-  ['black-ops-2', 'Call of Duty: Black Ops II', 'BLACK OPS II'],
-  ['advanced-warfare', 'Call of Duty: Advanced Warfare', 'EXO ZOMBIES'],
-  ['black-ops-3', 'Call of Duty: Black Ops III', 'BLACK OPS III'],
-  ['infinite-warfare', 'Call of Duty: Infinite Warfare', 'IW ZOMBIES'],
-  ['wwii', 'Call of Duty: WWII', 'WWII'],
-  ['black-ops-4', 'Call of Duty: Black Ops 4', 'BLACK OPS 4'],
-  ['cold-war', 'Call of Duty: Black Ops Cold War', 'COLD WAR'],
-  ['vanguard', 'Call of Duty: Vanguard', 'VANGUARD'],
-  ['modern-warfare-zombies', 'Call of Duty: Modern Warfare Zombies', 'MWZ'],
-  ['black-ops-6', 'Call of Duty: Black Ops 6', 'BLACK OPS 6'],
   ['black-ops-7', 'Call of Duty: Black Ops 7', 'BLACK OPS 7'],
+  ['black-ops-6', 'Call of Duty: Black Ops 6', 'BLACK OPS 6'],
+  ['modern-warfare-zombies', 'Call of Duty: Modern Warfare III Zombies', 'MODERN WARFARE ZOMBIES'],
+  ['vanguard', 'Call of Duty: Vanguard', 'VANGUARD'],
+  ['cold-war', 'Call of Duty: Black Ops Cold War', 'COLD WAR'],
+  ['black-ops-4', 'Call of Duty: Black Ops 4', 'BLACK OPS 4'],
+  ['black-ops-3', 'Call of Duty: Black Ops III', 'BLACK OPS III'],
+  ['black-ops-2', 'Call of Duty: Black Ops II', 'BLACK OPS II'],
+  ['black-ops', 'Call of Duty: Black Ops', 'BLACK OPS'],
+  ['world-at-war', 'Call of Duty: World at War', 'WORLD AT WAR'],
+  ['wwii', 'Call of Duty: WWII', 'WWII ZOMBIES'],
+  ['infinite-warfare', 'Call of Duty: Infinite Warfare', 'IW ZOMBIES'],
+  ['advanced-warfare', 'Call of Duty: Advanced Warfare', 'EXO ZOMBIES'],
+  ['ghosts-extinction', 'Call of Duty: Ghosts — Extinction', 'GHOSTS EXTINCTION'],
 ] as const;
 
 export const zombieMaps: readonly ZombieMap[] = [
@@ -49,6 +50,12 @@ export const zombieMaps: readonly ZombieMap[] = [
   ['infection', 'Infection', 'Call of Duty: Advanced Warfare', 'Exo Zombies'],
   ['carrier', 'Carrier', 'Call of Duty: Advanced Warfare', 'Exo Zombies'],
   ['descent', 'Descent', 'Call of Duty: Advanced Warfare', 'Exo Zombies'],
+
+  ['point-of-contact', 'Point of Contact', 'Call of Duty: Ghosts — Extinction', 'Extinction'],
+  ['nightfall', 'Nightfall', 'Call of Duty: Ghosts — Extinction', 'Extinction'],
+  ['mayday', 'Mayday', 'Call of Duty: Ghosts — Extinction', 'Extinction'],
+  ['awakening', 'Awakening', 'Call of Duty: Ghosts — Extinction', 'Extinction'],
+  ['exodus', 'Exodus', 'Call of Duty: Ghosts — Extinction', 'Extinction'],
 
   ['shadows-of-evil', 'Shadows of Evil', 'Call of Duty: Black Ops III'],
   ['the-giant', 'The Giant', 'Call of Duty: Black Ops III'],
@@ -101,7 +108,7 @@ export const zombieMaps: readonly ZombieMap[] = [
   ['shi-no-numa', 'Shi No Numa Reborn', 'Call of Duty: Vanguard'],
   ['the-archon', 'The Archon', 'Call of Duty: Vanguard'],
 
-  ['urzikstan', 'Urzikstan', 'Call of Duty: Modern Warfare Zombies'],
+  ['urzikstan', 'Urzikstan', 'Call of Duty: Modern Warfare III Zombies'],
 
   ['liberty-falls', 'Liberty Falls', 'Call of Duty: Black Ops 6'],
   ['terminus', 'Terminus', 'Call of Duty: Black Ops 6'],
@@ -126,5 +133,6 @@ export const zombieMaps: readonly ZombieMap[] = [
 ] as const;
 
 export const mapsForGame = (gameName: string) => zombieMaps.filter((map) => map[2] === gameName);
-export const standardZombieMaps = zombieMaps.filter((map) => map[3] !== 'Survival');
+const sideModeSlugs = new Set(['dead-ops-arcade', 'dead-ops-arcade-2', 'dead-ops-arcade-3', 'onslaught']);
+export const standardZombieMaps = zombieMaps.filter((map) => map[3] !== 'Survival' && !sideModeSlugs.has(map[0]));
 export const standardMapsForGame = (gameName: string) => standardZombieMaps.filter((map) => map[2] === gameName);

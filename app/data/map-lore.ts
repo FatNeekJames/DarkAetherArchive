@@ -1,4 +1,10 @@
 export type LoreSource = { label: string; url: string };
+export type QuestStep = {
+  title: string;
+  playerAction: string;
+  storyBeat: string;
+  boss?: boolean;
+};
 
 export type MapLore = {
   date: string;
@@ -6,6 +12,7 @@ export type MapLore = {
   chapter: string;
   summary: string;
   outcome: string;
+  questSteps?: QuestStep[];
   sources: LoreSource[];
 };
 
@@ -96,7 +103,49 @@ export const mapLore: Record<string, MapLore> = {
     date: 'Unknown — inside the Dark Aether', location: 'A fractured Dark Aether frontier', chapter: 'The Warden’s game begins',
     summary: 'The BO6 crew and their displaced Aether counterparts awaken in a stitched-together wasteland. The Warden steals the Spiritus, forcing both crews into his contest while Shadowsmith Veytharion holds Maya and Dempsey.',
     outcome: 'Veytharion is defeated and the first two missing allies are restored, but the Warden retains control of the larger game. BO7 supplies no confirmed Earth calendar date for these operations.',
-    sources: [{ label: 'Official BO7 Zombies hub', url: bo7Official }, { label: 'Map dossier', url: 'https://callofduty.fandom.com/wiki/Ashes_of_the_Damned' }],
+    questSteps: [
+      {
+        title: 'Reactivate Klaus',
+        playerAction: 'Survive until the Uber Klaus appears at Janus Towers, recover its Stabilizer Chip, install it at the Ashwood jail cell, then reboot Klaus with two Stun Grenades.',
+        storyBeat: 'Klaus becomes the crew’s mechanical guide through a realm assembled from displaced places and memories.',
+      },
+      {
+        title: 'Arm Ol’ Tessie',
+        playerAction: 'Kill the Cook at Exit 115, use the Freezer Key to recover the Abomination Carcass, and install it in Ashwood to unlock Ol’ Tessie’s beam attack.',
+        storyBeat: 'The truck stops being simple transport and becomes the central weapon needed to cross the fog and challenge the Warden’s machinery.',
+      },
+      {
+        title: 'Claim the Necrofluid Gauntlet',
+        playerAction: 'Have Klaus repair the Cosmodrome panel, survive the scanner lockdown, charge the Aether Barrel at three generators, solve the Vandorn Farm symbol cube, and complete the Gauntlet lockdown.',
+        storyBeat: 'The crew learns to manipulate the Dark Aether’s living fluid rather than merely endure it.',
+      },
+      {
+        title: 'Craft Yuri’s serum',
+        playerAction: 'Use Wisp Tea and the Gauntlet on the Ashwood mirror, reveal Yuri’s Pigpen cipher, gather the three ingredients it names, then add blood and survive the serum lockdown.',
+        storyBeat: 'The recipe turns the scattered horrors of the realm into a tool, linking its creatures, memories, and human experiments.',
+      },
+      {
+        title: 'Open the prism',
+        playerAction: 'Recover the Terrapin, Nightbird, and Bruin keys from the fog, carry each to Rabbit Alley, then take the DG-2 Turret revealed by the unlocked prism and mount it on Ol’ Tessie.',
+        storyBeat: 'A mid-quest transmission clarifies the path forward while the recovered turret gives the crew a weapon capable of charging the Aether Clock.',
+      },
+      {
+        title: 'Complete the four location trials',
+        playerAction: 'Charge the floating clock, then resolve the Vandorn Farm ritual, launch the Cosmodrome rocket, reunite the three Exit 115 spirits with their lightning, and reproduce the Blackwater Lake projector sequence.',
+        storyBeat: 'Each trial resolves a trapped memory embedded in one fragment of the map. Klaus finally retrieves the object needed to confront Veytharion.',
+      },
+      {
+        title: 'Defeat Veytharion',
+        playerAction: 'Speak to Klaus at the dock, drive Ol’ Tessie through all twelve road wisps, then use the truck, its boost, and the DG-2 Turret to break Veytharion’s shields and strike his exposed weak points.',
+        storyBeat: 'The boss fight is the crew’s first direct victory over one of the Warden’s Shadowsmiths.',
+        boss: true,
+      },
+    ],
+    sources: [
+      { label: 'Official BO7 Zombies overview', url: 'https://www.callofduty.com/blog/2025/09/call-of-duty-black-ops-7-zombies-deep-dive' },
+      { label: 'Official expanded crew file', url: 'https://www.callofduty.com/blog/2025/09/call-of-duty-black-ops-7-zombies-meet-the-team' },
+      { label: 'Main quest walkthrough', url: 'https://www.codzombiesguides.com/main-quests/black-ops-7/ashes-of-the-damned/' },
+    ],
   },
   'astra-malorum': {
     date: 'Unknown — after Ashes of the Damned', location: 'Dark Aether / Astra Malorum', chapter: 'The second Shadowsmith',
