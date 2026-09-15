@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/app/components/SiteLink';
 import { mapIntel } from './data/map-intel';
 import { standardMapsForGame, standardZombieMaps, zombieGames } from './data/maps';
 

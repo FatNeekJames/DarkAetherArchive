@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/app/components/SiteLink';
 import IntelArchiveExplorer, { type IntelExplorerRecord } from '../components/IntelArchiveExplorer';
 import { mapIntel } from '../data/map-intel';
 import { intelRecordSlug } from '../data/intel-details';

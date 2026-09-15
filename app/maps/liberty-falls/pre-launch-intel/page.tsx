@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/app/components/SiteLink';
 
 const archiveRoot = '/intel/prelaunch-bo6';
 

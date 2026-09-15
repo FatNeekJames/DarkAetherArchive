@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/app/components/SiteLink';
 import { standardMapsForGame, zombieGames } from '../data/maps';
 
 export default function IntelGameSidebar({ activeGame }: { activeGame?: string }) {

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/app/components/SiteLink';
 import { curatedIntelDetails, defaultIntelDescription, intelRecordSlug } from '../../../../data/intel-details';
 import { mapIntel } from '../../../../data/map-intel';
 import { mapResearchSources } from '../../../../data/research-sources';

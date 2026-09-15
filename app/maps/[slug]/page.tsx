@@ -3,7 +3,7 @@ import { zombieMaps } from '../../data/maps';
 import { mapResearchSources } from '../../data/research-sources';
 import MapIntelArchive from '../../components/MapIntelArchive';
 import { mapLore } from '../../data/map-lore';
-import Link from 'next/link';
+import Link from '@/app/components/SiteLink';
 
 export default async function MapDossier({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

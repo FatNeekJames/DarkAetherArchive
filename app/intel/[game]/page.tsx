@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/app/components/SiteLink';
 import IntelGameSidebar from '../../components/IntelGameSidebar';
 import { mapIntel, coldWarIntelTotals } from '../../data/map-intel';
 import { standardMapsForGame, zombieGames } from '../../data/maps';

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/app/components/SiteLink';
 
 const chronology = 'https://callofduty.fandom.com/wiki/Portal:Timeline/Dark_Aether_Saga';
 const officialRecap = 'https://www.callofduty.com/blog/2021/07/call-of-duty-black-ops-cold-war-zombies-story-so-far';

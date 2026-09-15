@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/app/components/SiteLink';
 import { useMemo, useState } from 'react';
 
 export type IntelExplorerRecord = { id: string; title: string; type: string; location: string; faction?: string; mapSlug: string; mapName: string; gameSlug: string; gameName: string; detailSlug: string };
